@@ -21,22 +21,30 @@
     <div class="scroll-horizontal">
       <div class="scroll-item">
         <ion-avatar class="avatar-md">
-          <img src="assets/img/avatars/7.jpg" alt="">
+          <img src="assets/img/avatars/7.jpg" alt="" />
         </ion-avatar>
-        <div class="item-label text-muted">
-          Your story
-        </div>
+        <div class="item-label text-muted">Your story</div>
+      </div>
+
+      <div
+        class="scroll-item"
+        *ngFor="let story of stories; let index = index"
+        [ngClass]="!story.seen ? 'unseen' : ''"
+        (click)="openStoryViewer(index)"
+      >
+        <ion-avatar class="avatar-md">
+          <img [src]="'assets/img/avatars/'+story.userId+'.jpg'" alt="" />
+        </ion-avatar>
+        <div class="item-label text-muted">{{story.userName}}</div>
       </div>
 
       <div class="scroll-item" *ngFor="let i of [1,2,3,4,5,6,7,8,9]">
         <div class="item-avatar">
           <ion-avatar class="avatar-md has-update has-status">
-            <img src="assets/img/avatars/{{i}}.jpg" alt="">
+            <img src="assets/img/avatars/{{i}}.jpg" alt="" />
           </ion-avatar>
         </div>
-        <div class="item-label">
-          Tony
-        </div>
+        <div class="item-label">Tony</div>
       </div>
     </div>
   </div>
@@ -47,7 +55,7 @@
         <ion-row class="ion-justify-content-center ion-align-items-center">
           <ion-col size="auto">
             <ion-avatar class="avatar-sm">
-              <img src="assets/img/avatars/{{i}}.jpg" alt="">
+              <img src="assets/img/avatars/{{i}}.jpg" alt="" />
             </ion-avatar>
           </ion-col>
           <ion-col>
@@ -59,7 +67,7 @@
         </ion-row>
       </div>
       <div class="post-media">
-        <img src="assets/img/img_{{i % 4 + 1}}.png" alt="">
+        <img src="assets/img/img_{{i % 4 + 1}}.png" alt="" />
       </div>
       <div class="post-actions">
         <ion-row>
@@ -89,7 +97,9 @@
       <div class="post-comments">
         <div class="comment-item">
           <span class="username">spiderman</span>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <a href="" class="hash-tag">#labore</a> <a href="" class="hash-tag">#dolore</a> <a href="" class="hash-tag">#magna</a> <a href="" class="hash-tag">#aliqua</a>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+          <a href="" class="hash-tag">#labore</a> <a href="" class="hash-tag">#dolore</a>
+          <a href="" class="hash-tag">#magna</a> <a href="" class="hash-tag">#aliqua</a>
         </div>
 
         <div class="comment-expander text-muted">View all 35 comments</div>
@@ -107,7 +117,7 @@
         <ion-row class="ion-justify-content-center ion-align-items-center">
           <ion-col size="auto">
             <ion-avatar class="avatar-xs">
-              <img src="assets/img/avatars/7.jpg" alt="">
+              <img src="assets/img/avatars/7.jpg" alt="" />
             </ion-avatar>
           </ion-col>
           <ion-col>
@@ -121,5 +131,4 @@
       </div>
     </div>
   </div>
-
 </ion-content>

@@ -1,4 +1,4 @@
-<ion-content>
+<ion-content socialGestures [gestureOpts]="gestureOpts" (press)="onPress($event)">
   <ion-slides (ionSlideDidChange)="setStorySeen()" #slides [options]="slideOpts">
     <ion-slide
       *ngFor="let story of stories; let indexStory = index"

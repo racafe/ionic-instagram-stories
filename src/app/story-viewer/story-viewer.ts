@@ -9,6 +9,7 @@ import { Platform, IonSlides, ModalController } from '@ionic/angular';
   styleUrls: ['story-viewer.scss'],
 })
 export class StoryViewerPage implements OnInit {
+  gestureOpts = [{ name: 'press' }];
   @ViewChild('slides', { static: true }) slides: IonSlides;
   @ViewChild('progress', { static: false }) set progressElement(progress: any) {
     if (progress) {
@@ -145,8 +146,8 @@ export class StoryViewerPage implements OnInit {
     }
   }
 
-  onSwipeUp() {
-    console.log('Swipe Up!');
+  onPress(event) {
+    event === 'start' ? this.pauseStory() : this.playStory();
   }
 
   closeStoryViewer() {

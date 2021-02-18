@@ -26,25 +26,11 @@
         <div class="item-label text-muted">Your story</div>
       </div>
 
-      <div
-        class="scroll-item"
-        *ngFor="let story of stories; let index = index"
-        [ngClass]="!story.seen ? 'unseen' : ''"
-        (click)="openStoryViewer(index)"
-      >
-        <ion-avatar class="avatar-md">
+      <div class="scroll-item" *ngFor="let story of stories; let index = index" (click)="openStoryViewer(index)">
+        <ion-avatar class="avatar-md" [ngClass]="!story.seen ? 'has-update' : ''">
           <img [src]="'assets/img/avatars/'+story.userId+'.jpg'" alt="" />
         </ion-avatar>
         <div class="item-label text-muted">{{story.userName}}</div>
-      </div>
-
-      <div class="scroll-item" *ngFor="let i of [1,2,3,4,5,6,7,8,9]">
-        <div class="item-avatar">
-          <ion-avatar class="avatar-md has-update has-status">
-            <img src="assets/img/avatars/{{i}}.jpg" alt="" />
-          </ion-avatar>
-        </div>
-        <div class="item-label">Tony</div>
       </div>
     </div>
   </div>

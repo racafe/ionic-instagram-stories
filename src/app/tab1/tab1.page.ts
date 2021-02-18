@@ -13,7 +13,7 @@ export class Tab1Page implements OnInit {
     {
       userPicture: 'assets/img/avatars/1.jpg',
       userId: 1,
-      userName: 'Igor',
+      userName: 'Maria',
       currentItem: 0,
       items: [
         {
@@ -66,8 +66,8 @@ export class Tab1Page implements OnInit {
     },
     {
       userPicture: 'assets/img/avatars/1.jpg',
-      userId: 1,
-      userName: 'Igor',
+      userId: 3,
+      userName: 'Anna',
       currentItem: 0,
       items: [
         {
@@ -84,8 +84,8 @@ export class Tab1Page implements OnInit {
     },
     {
       userPicture: 'assets/img/avatars/1.jpg',
-      userId: 2,
-      userName: 'Flávio',
+      userId: 4,
+      userName: 'Oscar',
       currentItem: 0,
       seen: false,
       items: [
@@ -120,8 +120,8 @@ export class Tab1Page implements OnInit {
     },
     {
       userPicture: 'assets/img/avatars/1.jpg',
-      userId: 1,
-      userName: 'Igor',
+      userId: 5,
+      userName: 'Nicole',
       currentItem: 0,
       items: [
         {
@@ -138,8 +138,8 @@ export class Tab1Page implements OnInit {
     },
     {
       userPicture: 'assets/img/avatars/1.jpg',
-      userId: 2,
-      userName: 'Flávio',
+      userId: 6,
+      userName: 'Mario',
       currentItem: 0,
       seen: false,
       items: [
